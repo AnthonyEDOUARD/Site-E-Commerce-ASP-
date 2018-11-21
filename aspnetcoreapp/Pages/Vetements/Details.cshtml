@@ -1,0 +1,43 @@
+﻿@page
+@model aspnetcoreapp.Pages.Vetements.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Vetement</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Vetement.Nom)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vetement.Nom)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vetement.Prix)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vetement.Prix)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vetement.Genre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vetement.Genre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vetement.Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vetement.Description)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Vetement.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

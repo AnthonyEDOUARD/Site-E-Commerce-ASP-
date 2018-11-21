@@ -1,0 +1,46 @@
+﻿@page
+@model aspnetcoreapp.Pages.Vetements.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Vetement</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Vetement.Nom)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vetement.Nom)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vetement.Prix)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vetement.Prix)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vetement.Genre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vetement.Genre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Vetement.Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Vetement.Description)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Vetement.ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>
